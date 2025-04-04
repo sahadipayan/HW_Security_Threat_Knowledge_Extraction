@@ -1,4 +1,4 @@
-# HW_Security_Threat_Knowledge_Extraction
+# HW Security Threat Knowledge Extraction
 
 This repository provides a framework for **hardware security threat knowledge extraction** using Retrieval-Augmented Generation (RAG). It is designed to extract actionable insights on different categories of hardware security threats from research papers. The extracted knowledge can be used for various downstream applications such as threat modeling, design verification, and security-aware system development.
 
@@ -73,4 +73,5 @@ Custom embedding generation using FAISS
 Easily extensible to add new hardware security threats or papers
 
 Outputs are saved in simple .txt files for easy downstream processing
+
 ---
