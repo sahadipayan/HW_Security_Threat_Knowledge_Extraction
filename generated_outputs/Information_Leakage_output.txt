@@ -1,0 +1,47 @@
+## Information Leakage: Threat Analysis in Hardware Systems
+
+### 1. Threat Description
+
+Information Leakage in the context of hardware systems refers to the unauthorized exposure of sensitive data due to vulnerabilities or design flaws within hardware components. This can occur through various channels such as side-channel attacks, improper data handling, or insider threats. It poses significant risks by potentially exposing confidential information, compromising system integrity, and affecting the overall security posture of hardware systems.
+
+### 2. Attack Scenarios
+
+#### Scenario 1: Side-Channel Attacks
+- **Mechanism**: Exploiting physical emissions (e.g., timing, power, electromagnetic) to infer sensitive data processed by hardware components.
+- **Target Hardware Components**: Processor cores, cryptographic modules.
+- **Potential Impact**: Unauthorized access to cryptographic keys or sensitive computations, leading to data breaches or system compromise.
+- **Real-world Example**: Kocher's timing attacks (1996) and power analysis attacks (1999) where attackers deduce encryption keys by analyzing the time taken or power consumed during computations.
+
+#### Scenario 2: Insider Threats
+- **Mechanism**: Authorized personnel misusing access to extract and leak sensitive information.
+- **Target Hardware Components**: Memory units, storage devices.
+- **Potential Impact**: Compromise of confidential data, intellectual property theft.
+- **Real-world Example**: Cases where insiders use USBs or portable storage devices to exfiltrate data, leading to significant data breaches.
+
+#### Scenario 3: Data Leakage through Interconnects
+- **Mechanism**: Eavesdropping on data transfers across hardware interconnects or buses.
+- **Target Hardware Components**: System buses, interconnect networks.
+- **Potential Impact**: Exposure of data in transit, potentially leading to unauthorized data access.
+- **Theoretical Model**: Attack scenarios where adversaries tap into system buses to capture sensitive information being transferred between components.
+
+#### Scenario 4: Exploiting Design Flaws
+- **Mechanism**: Leveraging unintended design features or flaws that lead to data leakage.
+- **Target Hardware Components**: Processor cores, memory controllers.
+- **Potential Impact**: Information exposure due to vulnerabilities in hardware logic, affecting system confidentiality.
+- **Real-world Example**: Spectre and Meltdown vulnerabilities, where speculative execution in processors leads to data leakage.
+
+### 3. Attacker Profile
+
+- **Side-Channel Attacks**: Requires physical proximity to the target hardware, specialized equipment for measuring emissions (e.g., oscilloscopes, EM probes).
+- **Insider Threats**: Requires legitimate access credentials and knowledge of internal systems, often needs portable storage media.
+- **Interconnect Eavesdropping**: Requires physical access to the hardware interconnects, possibly sophisticated tapping devices.
+- **Design Flaw Exploitation**: Requires detailed knowledge of hardware design and potential flaws, may involve crafting specific inputs or sequences to trigger leakage.
+
+### 4. Detection or Indicators
+
+- **Side-Channel Attacks**: Unusual electromagnetic or power variations during sensitive operations.
+- **Insider Threats**: Anomalies in data access patterns, unauthorized data transfers to external devices.
+- **Interconnect Eavesdropping**: Unusual data patterns or delays in data transfer across buses.
+- **Design Flaw Exploitation**: Unexpected system behavior or crashes during specific operations.
+
+This structured analysis provides a comprehensive overview of the threat of Information Leakage in hardware systems, detailing potential attack scenarios, attacker capabilities, and possible detection methods. This information serves as a crucial component for threat modeling and hardware security verification efforts.
