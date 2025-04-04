@@ -44,6 +44,7 @@ HW_Security_Threat_Knowledge_Extraction/
 │   └── retrieval_script.py        # Document retrieval logic using vector search
 │
 └── README.md                      # You're here!
+└── requirements.txt               # All libraries required
 ```
 
 ---
